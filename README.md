@@ -26,16 +26,38 @@ This document provides detailed information about the project, its features, mod
 ---
 
 ## Project Overview
-
+NetConnect-IPTV is a Flutter-based IPTV application designed to allow users to watch live TV channels. The app provides a simple and user-friendly interface for browsing and streaming live TV content, with support for multiple platforms such as Android, iOS, Web, and Desktop.
 **NetConnect-IPTV** is designed to provide users with seamless IPTV streaming and management through a native mobile or web app. The app allows users to:
 
 - **Login and Register**: Secure user authentication and session management.
 - **Browse IPTV Channels**: View and filter IPTV channels by categories such as news, sports, entertainment, and more.
 - **Watch Live TV**: Stream live television directly on their devices.
 - **Manage Profiles**: Edit personal information and manage preferences.
+- Live IPTV Streaming: Watch live TV channels with ease.
+- User Authentication: Login and register using secure authentication.
+- Channel Listings: Browse through available IPTV channels.
+- Video Player: Watch live TV streams directly from the app.
 
-This app integrates with a backend API to handle user management, IPTV channel listings, and streaming functionalities.
+## API Integration
 
+The project originally used an IPTV API integrated with OnRender to fetch IPTV channel listings and stream URLs. However, the OnRender API has been removed from this version. Users are now encouraged to integrate their own IPTV API, which can be easily configured with personal credentials.
+
+### Setting Up Your IPTV API
+
+Follow these steps to configure your own IPTV API:
+
+1. Obtain Your API Credentials:
+   - Sign up for an IPTV API provider that supports live streaming. Some popular IPTV API services include:
+     - [IPTV REST API](https://www.iptv-rest-api.com)
+     - [Xtream Codes API](https://xtream-codes.com)
+     - [Other IPTV APIs](https://www.google.com/search?q=iptv+api)
+   - Once you have access to an API, you will be given credentials such as an API_KEY, API_URL, and possibly a User ID or Password.
+
+2. Configure the API in the App:
+   - Navigate to the lib/services/api_services.dart file in the project.
+   - Replace the existing OnRender API integration with your custom IPTV API credentials.
+   - Update the API URLs and authentication methods according to your IPTV provider's documentation.
+     
 ---
 
 ## Getting Started
